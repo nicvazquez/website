@@ -116,18 +116,6 @@ export const Posts = () => {
 					.reactions-count {
 						margin: 1rem 0;
 					}
-
-					@media (min-width: 768px) {
-						ul {
-							width: 40%;
-							padding: 1rem 0;
-						}
-					}
-					@media (min-width: 1300px) {
-						ul {
-							width: 30%;
-						}
-					}
 				`
 			}</style>
 		</section>

@@ -13,41 +13,28 @@ export const SearchBar = ({ onChange }: SearchBar) => {
 			{/* @ts-ignore */}
 			<style jsx>{
 				/*css*/ `
-				.container-searchbar {
-					position: relative;
-					margin-bottom: 2rem;
-				}
-				input,
-				button {
-					padding: 0.5rem;
-					border: 1px solid #ccc;
-					border-radius: 0.25rem;
-				}
-				input {
-					width: 100%;
-					font-size: 1rem;
-				}
-				input:focus {
-					outline: 1px solid var(--primary);
-				}
-				button {
-					position: absolute;
-					right: 0;
-				}
-
-                @media (min-width: 768px) {
-                    @media (min-width: 768px) {
-						.container-searchbar {
-							width: 40%;
-							margin-bottom: 1rem;
-						}
+					.container-searchbar {
+						position: relative;
+						margin-bottom: 2rem;
 					}
-					@media (min-width: 1300px) {
-						.container-searchbar {
-							width: 30%;
-						}
+					input,
+					button {
+						padding: 0.5rem;
+						border: 1px solid #ccc;
+						border-radius: 0.25rem;
 					}
-			`
+					input {
+						width: 100%;
+						font-size: 1rem;
+					}
+					input:focus {
+						outline: 1px solid var(--primary);
+					}
+					button {
+						position: absolute;
+						right: 0;
+					}
+				`
 			}</style>
 		</div>
 	);
