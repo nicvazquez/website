@@ -59,13 +59,16 @@ export const Posts = () => {
 												{post.title}
 											</a>
 										</h3>
+									</div>
+
+									<div className="tags-publishDate">
 										<p className="publish-date">
 											📅
 											<time dateTime={post.published_at}> {post.readable_publish_date}</time>
 										</p>
-									</div>
 
-									<p className="tags">{post.tags}</p>
+										<p className="tags">{post.tags}</p>
+									</div>
 
 									<p className="description">{post.description}</p>
 
@@ -90,13 +93,16 @@ export const Posts = () => {
 						padding: 0;
 					}
 
-					.title-post {
-						margin-bottom: 0.5rem;
-						display: flex;
-						align-items: center;
-					}
 					.title-post h3 {
-						width: 80%;
+						margin-bottom: 1rem;
+					}
+
+					.tags-publishDate {
+						display: flex;
+						justify-content: space-between;
+						flex-wrap: wrap;
+						align-items: center;
+						margin-bottom: 1rem;
 					}
 
 					.publish-date {
@@ -104,7 +110,6 @@ export const Posts = () => {
 					}
 
 					.tags {
-						margin-bottom: 1rem;
 						color: var(--tags);
 					}
 
@@ -119,6 +124,12 @@ export const Posts = () => {
 					@media (min-width: 768px) {
 						.posts-container {
 							width: 50%;
+						}
+						.tags-publishDate {
+							justify-content: unset;
+						}
+						.publish-date {
+							margin-right: 1rem;
 						}
 					}
 				`

@@ -65,7 +65,10 @@ export const Profile = () => {
 
 					@media (min-width: 768px) {
 						.profile-container {
-							width: 30%;
+							width: 50%;
+						}
+						.social-links {
+							width: 80%;
 						}
 					}
 				`

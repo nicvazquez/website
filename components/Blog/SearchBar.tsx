@@ -33,6 +33,9 @@ export const SearchBar = ({ onChange }: SearchBar) => {
 					button {
 						position: absolute;
 						right: 0;
+						top: 0;
+						bottom: 0;
+						height: 100%;
 					}
 				`
 			}</style>
