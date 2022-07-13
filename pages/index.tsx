@@ -38,13 +38,13 @@ const Home: NextPage = () => {
 			{/* @ts-ignore */}
 			<style jsx>{
 				/*css*/ `
-					h1,
-					h2 {
-						margin-bottom: 1rem;
+					h1 {
+						margin-bottom: 0.5rem;
 					}
 					h2 {
 						font-size: 1.2rem;
 						font-weight: 500;
+						margin-bottom: 1rem;
 					}
 					.name-title {
 						text-align: center;
