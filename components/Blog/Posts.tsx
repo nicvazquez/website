@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { SearchBar } from "./SearchBar";
 
 interface Post {
 	id: number;
@@ -12,58 +13,73 @@ interface Post {
 	tags: string;
 }
 
-export const LastPosts = () => {
-	const [lastPosts, setLastPosts] = useState<Post[]>([]);
+export const Posts = () => {
+	const [posts, setPosts] = useState<Post[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
+	const [search, setSearch] = useState<string>("");
 	const url = "https://dev.to/api/articles?username=nicolasvazquez";
 
-	const fetchLastPosts = async () => {
+	const fetchPosts = async () => {
 		setLoading(true);
 		const response = await fetch(url);
 		const data = await response.json();
-		setLastPosts(data);
+		setPosts(data);
 		setLoading(false);
 	};
 
 	useEffect(() => {
-		fetchLastPosts();
+		fetchPosts();
 	}, []);
+	useEffect(() => {
+		console.log(search);
+	}, [search]);
 
 	return (
 		<section>
-			<h2>Articulos recientes</h2>
+			<SearchBar onChange={(e) => setSearch(e.target.value)} />
+
 			{loading ? (
 				<p>Cargando...</p>
 			) : (
 				<ul>
-					{lastPosts.map(
-						(post, index) =>
-							index <= 3 && (
-								<li key={post.id}>
-									<div className="title-post">
-										<h3>
-											<a href={post.url}>{post.title}</a>
-										</h3>
-										<p className="publish-date">
-											📆
-											<time dateTime={post.published_at}> {post.readable_publish_date}</time>
-										</p>
-									</div>
+					{posts
+						.filter((post) =>
+							post.title
+								.toLowerCase()
+								.replaceAll("á", "a")
+								.replaceAll("é", "e")
+								.replaceAll("í", "i")
+								.replaceAll("ó", "o")
+								.replaceAll("ú", "u")
+								.includes(search)
+						)
+						.map((post) => (
+							<li key={post.id}>
+								<div className="title-post">
+									<h3>
+										<a target="_blank" rel="noreferrer" href={post.url}>
+											{post.title}
+										</a>
+									</h3>
+									<p className="publish-date">
+										📆
+										<time dateTime={post.published_at}> {post.readable_publish_date}</time>
+									</p>
+								</div>
 
-									<p className="tags">{post.tags}</p>
+								<p className="tags">{post.tags}</p>
 
-									<p className="description">{post.description}</p>
+								<p className="description">{post.description}</p>
 
-									<a href={post.url} target="_blank" rel="noreferrer">
-										Leer más →
-									</a>
+								<a href={post.url} target="_blank" rel="noreferrer">
+									Leer más →
+								</a>
 
-									<p className="reactions-count">❤️ {post.positive_reactions_count}</p>
+								<p className="reactions-count">❤️ {post.positive_reactions_count}</p>
 
-									<hr />
-								</li>
-							)
-					)}
+								<hr />
+							</li>
+						))}
 				</ul>
 			)}
 
@@ -73,7 +89,6 @@ export const LastPosts = () => {
 					ul {
 						list-style: none;
 						padding: 0;
-						margin-top: 1rem;
 					}
 
 					.title-post {
