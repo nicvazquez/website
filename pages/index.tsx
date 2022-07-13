@@ -14,9 +14,9 @@ const Home: NextPage = () => {
 				<div className="name-title">
 					<h1>Nicolás Vazquez</h1>
 					<h2>Software Developer</h2>
-					<p>Hey! I'm Nicolás Vazquez, a programmer living in Argentina.</p>
+					<p>Hey! I{"'"}m Nicolás Vazquez, a programmer living in Argentina.</p>
 					<p>
-						If you are looking for someone to collaborate on innovative projects, don't
+						If you are looking for someone to collaborate on innovative projects, don{"'"}t
 						hesitate to{" "}
 						<a
 							href="https://linkedin.com/in/vazqueznicolasdev"
