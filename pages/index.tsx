@@ -16,7 +16,19 @@ const Home: NextPage = () => {
 			<main className={styles.main}>
 				<div className="name-title">
 					<h1>Nicolás Vazquez</h1>
-					<p>Desarrollador de Software</p>
+					<h2>Desarrollador de Software</h2>
+					<p>¡Hola! Soy Nicolás Vazquez, un programador viviendo en Argentina.</p>
+					<p>
+						Si buscas a alguien para colaborar en proyectos innovadores, no dudes en{" "}
+						<a
+							href="https://linkedin.com/in/vazqueznicolasdev"
+							target="_blank"
+							rel="noreferrer"
+						>
+							contactarme
+						</a>
+						.
+					</p>
 				</div>
 				<hr />
 
@@ -29,8 +41,13 @@ const Home: NextPage = () => {
 			{/* @ts-ignore */}
 			<style jsx>{
 				/*css*/ `
-					h1 {
+					h1,
+					h2 {
 						margin-bottom: 1rem;
+					}
+					h2 {
+						font-size: 1.2rem;
+						font-weight: 500;
 					}
 					.name-title {
 						text-align: center;

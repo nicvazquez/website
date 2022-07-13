@@ -42,13 +42,13 @@ export const Posts = () => {
 					{posts
 						.filter((post) =>
 							post.title
-								.toLowerCase()
 								.replaceAll("á", "a")
 								.replaceAll("é", "e")
 								.replaceAll("í", "i")
 								.replaceAll("ó", "o")
 								.replaceAll("ú", "u")
-								.includes(search)
+								.toLowerCase()
+								.includes(search.toLowerCase())
 						)
 						.map((post) => (
 							<li key={post.id}>
