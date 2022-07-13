@@ -30,12 +30,9 @@ export const Posts = () => {
 	useEffect(() => {
 		fetchPosts();
 	}, []);
-	useEffect(() => {
-		console.log(search);
-	}, [search]);
 
 	return (
-		<section>
+		<div className="posts-container">
 			<SearchBar onChange={(e) => setSearch(e.target.value)} />
 
 			{loading ? (
@@ -55,29 +52,31 @@ export const Posts = () => {
 						)
 						.map((post) => (
 							<li key={post.id}>
-								<div className="title-post">
-									<h3>
-										<a target="_blank" rel="noreferrer" href={post.url}>
-											{post.title}
-										</a>
-									</h3>
-									<p className="publish-date">
-										📆
-										<time dateTime={post.published_at}> {post.readable_publish_date}</time>
-									</p>
-								</div>
+								<article>
+									<div className="title-post">
+										<h3>
+											<a target="_blank" rel="noreferrer" href={post.url}>
+												{post.title}
+											</a>
+										</h3>
+										<p className="publish-date">
+											📅
+											<time dateTime={post.published_at}> {post.readable_publish_date}</time>
+										</p>
+									</div>
 
-								<p className="tags">{post.tags}</p>
+									<p className="tags">{post.tags}</p>
 
-								<p className="description">{post.description}</p>
+									<p className="description">{post.description}</p>
 
-								<a href={post.url} target="_blank" rel="noreferrer">
-									Leer más →
-								</a>
+									<a href={post.url} target="_blank" rel="noreferrer">
+										Leer más →
+									</a>
 
-								<p className="reactions-count">❤️ {post.positive_reactions_count}</p>
+									<p className="reactions-count">❤️ {post.positive_reactions_count}</p>
 
-								<hr />
+									<hr />
+								</article>
 							</li>
 						))}
 				</ul>
@@ -116,8 +115,14 @@ export const Posts = () => {
 					.reactions-count {
 						margin: 1rem 0;
 					}
+
+					@media (min-width: 768px) {
+						.posts-container {
+							min-width: 50%;
+						}
+					}
 				`
 			}</style>
-		</section>
+		</div>
 	);
 };

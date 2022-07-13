@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Posts } from "../components/Blog/Posts";
+import { Profile } from "../components/Profile/Profile";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -18,19 +19,33 @@ const Home: NextPage = () => {
 					<p>Desarrollador de Software</p>
 				</div>
 				<hr />
-				<Posts />
+
+				<section>
+					<Profile />
+					<Posts />
+				</section>
 			</main>
 
 			{/* @ts-ignore */}
-			<style jsx>{`
-				h1 {
-					margin-bottom: 1rem;
-				}
-				.name-title {
-					text-align: center;
-					margin-bottom: 2rem;
-				}
-			`}</style>
+			<style jsx>{
+				/*css*/ `
+					h1 {
+						margin-bottom: 1rem;
+					}
+					.name-title {
+						text-align: center;
+						margin-bottom: 2rem;
+					}
+					@media (min-width: 768px) {
+						section {
+							display: flex;
+							justify-content: space-evenly;
+							align-items: start;
+							min-width: 70%;
+						}
+					}
+				`
+			}</style>
 		</div>
 	);
 };
