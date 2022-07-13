@@ -118,7 +118,7 @@ export const Posts = () => {
 
 					@media (min-width: 768px) {
 						.posts-container {
-							min-width: 50%;
+							width: 50%;
 						}
 					}
 				`

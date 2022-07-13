@@ -62,6 +62,12 @@ export const Profile = () => {
 					.social-links a:hover {
 						transform: translateY(-3px);
 					}
+
+					@media (min-width: 768px) {
+						.profile-container {
+							width: 30%;
+						}
+					}
 				`
 			}</style>
 		</div>
