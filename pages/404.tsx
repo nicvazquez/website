@@ -6,9 +6,9 @@ const Page404: NextPage = () => {
 	return (
 		<div className="container">
 			<div>
-				<h1>404 | Página no encontrada</h1>
+				<h1>404 | Page not found</h1>
 				<Link href="/">
-					<button>Volver al inicio</button>
+					<button>Go to homepage</button>
 				</Link>
 			</div>
 			{/* @ts-ignore */}

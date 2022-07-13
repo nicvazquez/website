@@ -10,7 +10,7 @@ export const Profile = () => {
 				<Image priority src={Avatar.src} alt="Avatar" width="192px" height="192px" />
 			</span>
 
-			<p className="short-text">Suelo escribir sobre informática y esas cosas 💻</p>
+			<p className="short-text">I usually write about computers and stuff 💻</p>
 
 			<div className="social-links">
 				{socialLinks.map((link) => (

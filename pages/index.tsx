@@ -13,16 +13,17 @@ const Home: NextPage = () => {
 			<main className={styles.main}>
 				<div className="name-title">
 					<h1>Nicolás Vazquez</h1>
-					<h2>Desarrollador de Software</h2>
-					<p>¡Hola! Soy Nicolás Vazquez, un programador viviendo en Argentina.</p>
+					<h2>Software Developer</h2>
+					<p>Hey! I'm Nicolás Vazquez, a programmer living in Argentina.</p>
 					<p>
-						Si buscas a alguien para colaborar en proyectos innovadores, no dudes en{" "}
+						If you are looking for someone to collaborate on innovative projects, don't
+						hesitate to{" "}
 						<a
 							href="https://linkedin.com/in/vazqueznicolasdev"
 							target="_blank"
 							rel="noreferrer"
 						>
-							contactarme
+							contact me
 						</a>
 						.
 					</p>

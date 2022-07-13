@@ -36,7 +36,7 @@ export const Posts = () => {
 			<SearchBar onChange={(e) => setSearch(e.target.value)} />
 
 			{loading ? (
-				<p>Cargando...</p>
+				<p>Loading...</p>
 			) : (
 				<ul>
 					{posts

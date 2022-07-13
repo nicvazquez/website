@@ -1,8 +1,8 @@
 export const siteMetadata = {
-	title: "Nicolas Vazquez",
+	title: "Nicolás Vazquez",
 	author: "Nicolás Vazquez",
 	description:
-		"Soy Nicolás Vazquez, desarrollador de software con experiencia tanto freelance como en empresas.",
+		"I am Nicolás Vazquez, a software developer with experience both freelance and in companies.",
 	language: "es-ar",
 	siteUrl: "https://nicolasvazquez.com.ar",
 	email: "vazqueznicolasdev@gmail.com",

@@ -7,7 +7,7 @@ interface SearchBar {
 export const SearchBar = ({ onChange }: SearchBar) => {
 	return (
 		<div className="container-searchbar">
-			<input onChange={onChange} type="text" placeholder="Buscar" />
+			<input onChange={onChange} type="text" placeholder="Search something" />
 			<button>🔎</button>
 
 			{/* @ts-ignore */}
