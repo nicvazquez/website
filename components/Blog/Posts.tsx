@@ -73,7 +73,7 @@ export const Posts = () => {
 									<p className="description">{post.description}</p>
 
 									<a href={post.url} target="_blank" rel="noreferrer">
-										Leer más →
+										Read more →
 									</a>
 
 									<p className="reactions-count">❤️ {post.positive_reactions_count}</p>
